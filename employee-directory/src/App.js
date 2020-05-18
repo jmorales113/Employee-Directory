@@ -1,11 +1,9 @@
 import React from 'react';
-import HeaderSearch from "./components/HeaderSearch.js"
-import EmployeeTable from "./components/EmployeeTable.js"
+import Container from "./components/Container"
 
 function App() {
-  return <EmployeeTable />
-          
-    
+  return <Container />
+  
 }
 
 export default App;

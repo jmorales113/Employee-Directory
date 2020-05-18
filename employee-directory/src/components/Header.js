@@ -1,8 +1,15 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import "../Header.css"
 
 function Header() {
-    return <h1>Header</h1>
+    return (
+    
+    <div className="jumbotron">
+        <h1 className="display-4">Employee Directory</h1>
+        <p className="lead">Click on carrots to filter by heading or use the search box to narrow your results</p>
+    </div>
+
+    )
 }
 
 export default Header

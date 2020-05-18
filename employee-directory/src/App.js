@@ -1,8 +1,10 @@
 import React from 'react';
-import Header from "./components/Header.js"
+import HeaderSearch from "./components/HeaderSearch.js"
+import EmployeeTable from "./components/EmployeeTable.js"
 
 function App() {
-  return <Header />
+  return <EmployeeTable />
+          
     
 }
 

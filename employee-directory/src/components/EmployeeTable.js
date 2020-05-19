@@ -27,7 +27,9 @@ function EmployeeTable(props) {
                     <td>
                     {phone}
                     </td>
-                    
+                    <td>
+                    {email}
+                    </td>
 
                 </tr>
                 )

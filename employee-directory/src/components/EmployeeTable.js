@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/EmployeeTable.css"
 
-function EmployeeTable() {
+function EmployeeTable(props) {
     return (
         
         <table>
@@ -15,12 +15,15 @@ function EmployeeTable() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
+            {props.results.map(
+                ({dob, email, login, name, phone, picture }) => (
+                <tr key={login.uuid}>
                     <td>
-                    
-                    
+                    <img src={picture.thumbnail} />
                     </td>
                 </tr>
+                )
+            )}
             </tbody>
         </table>
     )

@@ -11,6 +11,7 @@ function HeaderSearch(props) {
     </div>
     <div className= "input">
     <input
+    onChange={props.handleInputChange}
     value = {props.value}
     id = "employees"
     type = "text"

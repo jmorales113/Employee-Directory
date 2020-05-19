@@ -21,10 +21,10 @@ class Container extends React.Component {
         })
     })
     .catch((err) => console.log(err))
-    console.log(this.state.employees)
+
     }
 
-    employeeSearch = () => {
+    employeeList = () => {
         API.getUsers()
         .then((res) => {
             this.setState({
@@ -36,12 +36,45 @@ class Container extends React.Component {
 
     }
 
+    handleInputChange = (e) => {
+        const employees = this.state.employees
+        const inputValue = e.target.value
+        const employeeFilter = employees.filter((employee) => 
+            employee.name.first.toLowerCase().indexOf(inputValue.toLowerCase())
+        )
+        this.setState({
+            employeeFilter
+        })
+
+    }
+
+    employeeSearch = (e) => {
+        e.preventDefault()
+
+        if (!this.state.search) {
+            alert("Please enter a name")
+        }
+        const { search, employees } = this.state
+        const employeeFilter = employees.filter((employee) => 
+            employee.name.first.toLowerCase().includes(search.toLowerCase())
+        )
+        this.setState({
+            employeeFilter
+        })
+    }
+
     render() {
         console.log(this.state.employees)
     return (
         <div>
-            <HeaderSearch />
-            <EmployeeTable />
+            <HeaderSearch
+            employee={this.state.employees}
+            employeeList={this.employeeList}
+            handleInputChange={this.handleInputChange}
+            />
+            <EmployeeTable 
+            results={this.state.employeeFilter}
+            />
         </div>
     
     )

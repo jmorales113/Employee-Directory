@@ -13,10 +13,7 @@ function HeaderSearch(props) {
     <input
     onChange={props.handleInputChange}
     value = {props.value}
-    id = "employees"
     type = "text"
-    name = "search"
-    list= "employee"
     placeholder = "Search"
     />
     <hr/>

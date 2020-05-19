@@ -1,4 +1,5 @@
 import React from "react"
+import Moment from "react-moment"
 import "../styles/EmployeeTable.css"
 
 function EmployeeTable(props) {
@@ -30,7 +31,9 @@ function EmployeeTable(props) {
                     <td>
                     {email}
                     </td>
-
+                    <td>
+                   <Moment format="MM/DD/YYYY"> {dob.date}></Moment>
+                    </td>
                 </tr>
                 )
             )}

@@ -21,15 +21,14 @@ class Container extends React.Component {
         })
     })
     .catch((err) => console.log(err))
-
     }
 
     employeeList = () => {
         API.getUsers()
         .then((res) => {
             this.setState({
-            employees: res.data.results,
-            employeeFilter: res.data.results
+                employees: res.data.results,
+                employeeFilter: res.data.results
             })
         })
     .catch((err) => console.log(err))
@@ -40,7 +39,7 @@ class Container extends React.Component {
         const employees = this.state.employees
         const inputValue = e.target.value
         const employeeFilter = employees.filter((employee) => 
-            employee.name.first.toLowerCase().indexOf(inputValue.toLowerCase())
+            employee.name.first.toLowerCase().indexOf(inputValue.toLowerCase()) > -1
         )
         this.setState({
             employeeFilter

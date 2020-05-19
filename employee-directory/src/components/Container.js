@@ -95,8 +95,8 @@ class Container extends React.Component {
             sortByEmail={this.sortByEmail}
             />
         </div>
-    
-    )
+        
+        )
     }
 }
 

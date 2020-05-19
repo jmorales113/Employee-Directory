@@ -16,7 +16,7 @@ function EmployeeTable(props) {
                 </tr>
             </thead>
             <tbody>
-            {props.results.map(
+                {props.results.map(
                 ({dob, email, login, name, phone, picture }) => (
                 <tr key={login.uuid}>
                     <td>

@@ -24,6 +24,10 @@ function EmployeeTable(props) {
                     <td>
                     {name.first} {name.last}
                     </td>
+                    <td>
+                    {phone}
+                    </td>
+                    
 
                 </tr>
                 )

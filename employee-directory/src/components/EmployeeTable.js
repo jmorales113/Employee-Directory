@@ -11,7 +11,7 @@ function EmployeeTable(props) {
                 <th>Image</th>
                 <th>Name</th>
                 <th>Phone</th>
-                <th>Email</th>
+                <th onClick={props.sortByEmail}>Email</th>
                 <th>DOB</th>
                 </tr>
             </thead>

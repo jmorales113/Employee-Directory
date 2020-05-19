@@ -21,7 +21,6 @@ function HeaderSearch(props) {
     />
     <hr/>
     </div>
-
     </header>
     )
 }

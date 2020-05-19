@@ -62,6 +62,25 @@ class Container extends React.Component {
         })
     }
 
+    sortByEmail = () => {
+        const emailFilter = this.state.employeeFilter;
+        if (this.state.order === 'asc') {
+          const emailSort = emailFilter.sort((asc, desc) => (asc.email > desc.email ? 1 : -1));
+    
+          this.setState({
+            employeeFilter: emailSort,
+            order: 'desc',
+          });
+        } else {
+          const emailSort = emailFilter.sort((asc, desc) => (asc.email > desc.email ? -1 : 1));
+    
+          this.setState({
+            employeeFilter: emailSort,
+            order: 'asc',
+          });
+        }
+      };
+
     render() {
         console.log(this.state.employees)
     return (
@@ -73,6 +92,7 @@ class Container extends React.Component {
             />
             <EmployeeTable 
             results={this.state.employeeFilter}
+            sortByEmail={this.sortByEmail}
             />
         </div>
     

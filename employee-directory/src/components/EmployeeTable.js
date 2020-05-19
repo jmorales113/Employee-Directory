@@ -21,6 +21,10 @@ function EmployeeTable(props) {
                     <td>
                     <img src={picture.thumbnail} />
                     </td>
+                    <td>
+                    {name.first} {name.last}
+                    </td>
+
                 </tr>
                 )
             )}

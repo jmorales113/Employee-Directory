@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/HeaderSearch.css"
 
-function HeaderSearch() {
+function HeaderSearch(props) {
     return (
 
     <header>
@@ -11,7 +11,7 @@ function HeaderSearch() {
     </div>
     <div className= "input">
     <input
-    value = ""
+    value = {props.value}
     id = "employees"
     type = "text"
     name = "search"
